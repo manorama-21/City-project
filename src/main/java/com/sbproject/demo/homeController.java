@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class homeController {
-	@Autowired
-	private AdminService adminService;
+	/*
+	 * @Autowired private AdminService adminService;
+	 */
 
 	 @GetMapping("/")
 	 public String home() {
@@ -35,13 +36,11 @@ public class homeController {
 	 public String admin() {
 		 return "admin";
 	 }
-	
-	 @GetMapping("/adminreg")
-	 public String adminreg(Model model) {
-		 Admin admin =new Admin();
-		 model.addAttribute("Admin",admin);
-		 return "adminreg";
-	 }
+		/*
+		 * @GetMapping("adminreg") public String adminreg() {
+		 * 
+		 * return "adminreg"; }
+		 */
 	 
 	 @GetMapping("/admin_home")
 	 public String admin_home() {
@@ -106,33 +105,29 @@ public class homeController {
 	 public String gallery() {
 		 return "gallery";
 	 }
-
+		/*
+		 * @GetMapping("/updateForm") public String updateUser() { return "updateUser";
+		 * }
+		 */
 		/*
 		 * @GetMapping("/viewdetails") public String viewdetails() { return
 		 * "viewdetails"; }
 		 */
-	 @GetMapping("/admindetail")
-	 public String admindetail(Model model) {
-		 model.addAttribute("data",adminService.getUsers());
-		 return "admindetail";
-	 }
-	 
-	 @PostMapping("/login")
-		public String login(@ModelAttribute("Admin") Admin admin) {
-			adminService.saveUser(admin);
-			return "admin";
-		}
-	 @GetMapping("/deleteUser/{id}")
-		public String deleteUser(@PathVariable(value="id") long id) {
-			adminService.deleteUser(id);
-			return "admindetail";
-		}
-		
-		@GetMapping("/updateForm/{id}")
-		public String updateadmindetail(@PathVariable(value="id") long id, Model model) {
-			Optional <Admin> user= adminService.getUserById(id);
-			model.addAttribute("data", user);
-			return "updateadmindetail";
-		}
+		/*
+		 * @GetMapping("/admindetail") public String admindetail(Model model) {
+		 * model.addAttribute("data", adminService.getUsers()); return "admindetail"; }
+		 * 
+		 * @PostMapping("login") public String saveUser(@ModelAttribute("admin") Admin
+		 * admin) { adminService.saveUser(admin); return "admin"; }
+		 * 
+		 * @GetMapping("/deleteUser/{id}") public String
+		 * deleteUser(@PathVariable(value="id") long id) { adminService.deleteUser(id);
+		 * return "admindetail"; }
+		 * 
+		 * @GetMapping("/updateForm/{id}") public String
+		 * updateadmindetail(@PathVariable(value="id") long id, Model model) { Optional
+		 * <Admin> admin= adminService.getUserById(id); model.addAttribute("data",
+		 * admin); return "updateadmindetail"; }
+		 */
 	 
 }

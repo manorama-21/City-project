@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Admin {
+public class User {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -14,7 +14,7 @@ public class Admin {
 	
 	String fname;
 	String lname;
-	String uname;
+	String phone;
 	String mail;
 	String pass;
 	String cpass;
@@ -36,11 +36,11 @@ public class Admin {
 	public void setLname(String lname) {
 		this.lname = lname;
 	}
-	public String getUname() {
-		return uname;
+	public String getPhone() {
+		return phone;
 	}
-	public void setUname(String uname) {
-		this.uname = uname;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 	public String getMail() {
 		return mail;
@@ -60,24 +60,24 @@ public class Admin {
 	public void setCpass(String cpass) {
 		this.cpass = cpass;
 	}
-	public Admin(Long id, String fname, String lname, String uname, String mail, String pass, String cpass) {
+	public User(Long id, String fname, String lname, String phone, String mail, String pass, String cpass) {
 		super();
 		this.id = id;
 		this.fname = fname;
 		this.lname = lname;
-		this.uname = uname;
+		this.phone = phone;
 		this.mail = mail;
 		this.pass = pass;
 		this.cpass = cpass;
 	}
-
-	public Admin() {
+	public User() {
 		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
-		return "Admin [id=" + id + ", fname=" + fname + ", lname=" + lname + ", uname=" + uname + ", mail=" + mail
+		return "User [id=" + id + ", fname=" + fname + ", lname=" + lname + ", phone=" + phone + ", mail=" + mail
 				+ ", pass=" + pass + ", cpass=" + cpass + "]";
 	}
+	
 	
 }

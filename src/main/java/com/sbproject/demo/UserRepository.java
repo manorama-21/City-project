@@ -2,6 +2,6 @@ package com.sbproject.demo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface AdminRepository extends JpaRepository<Admin,Long> {
+public interface UserRepository extends JpaRepository<User, Long>{
 
 }
