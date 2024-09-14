@@ -1,0 +1,61 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+/* body{
+	background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKS03NyUDRZ8LCOOX8o92dvCoyWFqo_m_5Cg&s");
+	background-repeat:no-repeat;
+	background-size:100%;
+
+} */
+h1{
+	font-size:30px;
+	text-decoration:underline;
+	text-align:center;
+}
+table{
+	width:100%;
+	font-size:20px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div th:include="homenav.html"></div>
+<br><br><br><br><br><br><br><br><br><br><br>
+<div>
+<h1>Admin Details</h1>
+
+
+<br><br>
+<table border="1">
+
+<tr>
+<th>ID</th>
+<th>Firstname</th>
+<th>Lastname</th
+><th>Username</th>
+<th>Mail</th>
+
+
+<th>Password</th>
+<th>Confirm_Password</th>
+<th>Actions</th>
+</tr>
+
+ <tr th:each="u: ${data}">
+<td th:text="${u.id}"></td>
+<td th:text="${u.fname}"></td>
+<td th:text="${u.lname}"></td>
+<td th:text="${u.uname}"></td>
+<td th:text="${u.mail}"></td>
+<td th:text="${u.pass}"></td>
+<td th:text="${u.cpass}"></td>
+<td><a th:href="@{/updateForm/{id}(id=${u.id})}">Update</a>||
+<a th:href="@{/deleteUser/{id}(id=${u.id})}">Delete</a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

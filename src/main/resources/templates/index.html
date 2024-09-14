@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <title>City Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;1,300&display=swap"
+        rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha512-doJrC/ocU8VGVRx3O9981+2aYUn3fuWVWvqLi1U+tA2MWVzsw+NVKq1PrENF03M+TYBP92PnYUlXFH1ZW0FpLw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/index.css">
+    <style>
+    .select-box{
+    position:absolute;
+    left:45%;
+    font-size:20px;
+    width:200px;
+ 
+    }
+    
+    </style>
+</head>
+
+<body>
+  <!--   <div id="arrow">
+        <i class="fa fa-arrow-up"></i>
+    </div> -->
+    
+    <div th:include="navbar.html"></div>
+    
+ 
+<br><br><br><br><br><br><br><br><br><br><br><br>
+ <section id="header">
+        <div class="container">
+            <div class="header-info-par">
+                <!-- <h1 class="typewrite" data-period="2000"
+                    data-type='["Happiness is closer than you think","Adventure Awaits, go find it.","Dont be a tourist, be a traveler."]'>
+                </h1> -->
+                <h1 class="animated zoomIn"style="animation-delay:1s;font-family:merienda;font-size:50px">WELCOME TO PRAYAGRAJ</h1>
+                <p  class="animated fadeInLeft"style="animation-delay:2s;font-family:poppins;font-size:18px">Allahabad is one of the oldest cities in India. It is crowned in ancient scriptures as 'Prayag', 'Prayagraj' or 'Teertharaj' and is considered the holiest of pilgrimage centres of India. It is situated at the confluence of three rivers- Ganga, Yamuna and the invisible Saraswati.</p>
+                <p  class="animated fadeInRight"style="animation-delay:3s;font-family:poppins;font-size:18px">In this site used to store the details of city and helps all the users who just visits our website. This site also provides all the services like Restaurants, Malls , Education ,Temples, Health and hospital related information.If you more details go to select category..</p>
+               <!--  <a href="about"  id="about">Read More</a> -->
+               </div>
+               <br>
+                <div class ="select-box">
+
+            <select name="links" id="" size="1" onchange="window.location.href=this.value;" >
+            <option value="navbar">Select Category</option>
+            <option value="tourprayag">Tourist Places</option>
+            <option value="mallprayag">Malls</option>
+            <option value="hosprayag">Hospitals</option>
+            <option value="temple">Temples</option>
+            <option value="school">Schools</option>
+              <option value="college">Colleges</option>
+            <option value="restaurant">Restaurants</option>
+            
+            </select>
+            </div>
+<br><br>
+            <div class="video">
+                <video id="video" autoplay loop muted>
+                    <source src="../videos/1.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+</section>
+    <!-- Second Slides Section -->
+    <section id="welcome-text">
+        <div class="container">
+            <h2 class="animated zoomIn"style="animation-delay:1s">Prayagraj is believed to be the most important pilgrimage centre for Hindus. </h2>
+            <p class="animated zoomIn" style="animation-delay:2s;font-size:20px">Traditionally river confluences are regarded as auspicious places, but in Sangam, the significance of the confluence is most pious because here, the holy Ganga, Yamuna and the mythical Saraswati meet to become one.</p>
+        </div>
+    </section>
+    <!-- Slides Section Start-->
+    <section id="slides-par">
+        <div class="container">
+            <div class="slides">
+                <div class="slide_1 slide_2">
+                    <div class="slide-info">
+                        <p>Yamuna Bridge</p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_3">
+                    <div class="slide-info">
+                        <p>Temple</p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_4">
+                    <div class="slide-info">
+                        <p>Triveni-Sangam</p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_5">
+                    <div class="slide-info">
+                        <p>River</p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_6">
+                    <div class="slide-info">
+                        <p>City info</p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_7">
+                    <div class="slide-info">
+                        <p>Kumbh City</p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_8">
+                    <div class="slide-info">
+                        <p>Prayag-Junction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Slides Section Start-->
+
+    <!-- Book Now Section Start -->
+    <section id="book">
+      
+        <div th:include="feedback.html"></div>
+    </section>
+    <!-- Book Now Section End -->
+
+    <!-- Gallery Section Starts -->
+    <section id="gallery">
+        <div class="container">
+            <div class="row">
+                <div align="center" class="filter-btn-par">
+                    <button class="filter-button" data-filter="all">ALL</button>
+                    <button class="filter-button" data-filter="temple">TEMPLE</button>
+                    <button class="filter-button" data-filter="tour">TOURIST</button>
+                    <button class="filter-button" data-filter="kumbh">KUMBH</button>
+                </div>
+                <div class="filter-gal-par">
+                    <div class="gallery-item temple">
+                        <img src="../images/temples/1.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item temple">
+                        <img src="../images/temples/2.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item temple">
+                        <img src="../images/temples/3.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item tour">
+                        <img src="../images/tourist/1.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item tour">
+                        <img src="../images/tourist/2.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item tour">
+                        <img src="../images/tourist/3.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item kumbh">
+                        <img src="../images/kumbh/1.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item kumbh">
+                        <img src="../images/kumbh/2.jpg" alt="" class="img-responsive">
+                    </div>
+                     <div class="gallery-item kumbh">
+                        <img src="../images/kumbh/3.jpg" alt="" class="img-responsive">
+                    </div> 
+                    
+                </div>
+              
+            </div>
+              <a href="gallery" style="font-size:25px; position:relative; left:40%">SHOW MORE...............</a>
+        </div>
+    </section>
+    <!-- Gallery Section Ends -->
+
+   
+    <!-- Blog Section Starts -->
+    <section id="blog">
+        <div class="container">
+            <h3>News And Events</h3>
+            <div class="blog-par">
+                <div class="blog-content">
+                    <!-- one div for image and one for info -->
+                    <div class="blog-img-par">
+                        <img src="images/slider/bangcok.jpg" alt="" class="img-responsive">
+
+                    </div>
+                    <div class="blog-info-par">
+                        <ul>
+                            <li>Chiru Vishnoi</li>
+                            <li>24.08.2021</li>
+                        </ul>
+                        <h4>Lorem ipsum dolor consectetur</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut natus, deserunt deleniti
+                            sapiente omnis ab quas mollitia! Cumque, maxime at.</p>
+
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <!-- one div for image and one for info -->
+                    <div class="blog-img-par">
+                        <img src="images/slider/cario.jpg" alt="" class="img-responsive">
+
+                    </div>
+                    <div class="blog-info-par">
+                        <ul>
+                            <li>Chiru Vishnoi</li>
+                            <li>24.08.2021</li>
+                        </ul>
+                        <h4>Lorem ipsum dolor consectetur</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut natus, deserunt deleniti
+                            sapiente omnis ab quas mollitia! Cumque, maxime at.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="blog-par">
+                <div class="blog-content">
+                    <!-- one div for image and one for info -->
+                    <div class="blog-img-par">
+                        <img src="images/slider/bangcok.jpg" alt="" class="img-responsive">
+
+                    </div>
+                    <div class="blog-info-par">
+                        <ul>
+                            <li>Chiru Vishnoi</li>
+                            <li>24.08.2021</li>
+                        </ul>
+                        <h4>Lorem ipsum dolor consectetur</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut natus, deserunt deleniti
+                            sapiente omnis ab quas mollitia! Cumque, maxime at.</p>
+
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <!-- one div for image and one for info -->
+                    <div class="blog-img-par">
+                        <img src="images/slider/cario.jpg" alt="" class="img-responsive">
+
+                    </div>
+                    <div class="blog-info-par">
+                        <ul>
+                            <li>Chiru Vishnoi</li>
+                            <li>24.08.2021</li>
+                        </ul>
+                        <h4>Lorem ipsum dolor consectetur</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut natus, deserunt deleniti
+                            sapiente omnis ab quas mollitia! Cumque, maxime at.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Mutiple Slider Section Ends -->
+
+    <!-- Footer Starts-->
+    <section id="footer">
+        <div class="container">
+            <div class="row text-center text-xs-center text-sm-left text-md-left">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5>Quick links</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Contact Us</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Feedback</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5>Quick links</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Help Center</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Author</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Blog</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Privacy Policy</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5>Our Location</h5>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115330.45656870601!2d81.71918285001391!3d25.402240789131696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398534c9b20bd49f%3A0xa2237856ad4041a!2sPrayagraj%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1724928424399!5m2!1sen!2sin" width="450" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5 text-center">
+                    <ul class="list-unstyled list-inline social">
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p class="h6">&copy; All rights reserved.<a class="text-green ml-2" href="#" target="_blank">City Guide</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- footer end -->
+
+    <script src="../static/js/owl.carousel.min.js"></script>
+    <script src="../static/js/extrenaljq.js"></script>
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+</body>
+
+</html>

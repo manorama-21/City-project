@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Category</title>
+
+<link rel="stylesheet" href="css/addcategory.css">
+</head>
+<body>
+
+<div th:include="homenav.html"></div>
+	
+		<!-- Navigation Section -->
+	<nav>
+  <ul>
+    <li><a href="admin_home">Home</a></li>
+  
+ <!--    <li>
+      <a href="">Place</a>
+      <ul>
+        <li><a href="addplaces">Add Places</a></li>
+  		<li><a href="#">View Places</a></li>
+        
+      </ul>
+    </li>
+    
+        <li>
+      <a href="">City</a>
+      <ul>
+        <li><a href="addcity">Add City</a></li>
+  		<li><a href="#">View City</a></li>
+        
+        
+      </ul>
+    </li> -->
+    
+         <!--   <li>
+      <a href="">Category</a>
+      <ul> -->
+        <li><a href="addcategory">Add Category</a></li>
+  		<li><a href="viewdetails">View Category</a></li>
+        
+<!--       </ul>
+    </li> -->
+    
+    
+    <li><a href="admin_home">Logout</a></li>
+    
+  </ul>
+</nav>
+	<br><br><br><br><br><br><br><br><br><br>
+<h1><font color="indigo">ADD CATEGORY</font></h1>
+
+<form action="" method="post">
+<br>
+  <label for="category_title">Category Title</label><br>
+  <input type="text" id="category_title" name="category_title" value=""><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+	<br><br><br><br><br><br>
+	<footer>
+ <p>&copy; 2024 SMART CITY - CITY GUIDE</p>
+</footer>
+</body>
+</html>

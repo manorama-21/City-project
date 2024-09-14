@@ -1,0 +1,216 @@
+
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            background-image:url("../images/aboutbg.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            filter: brightness(0.8);
+        }
+        .gallery {
+            padding-top: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .row > .imgbox {
+    width: 240px;
+    height: 200px;
+    overflow: hidden;
+}
+.imgbox img{
+    width: inherit;
+    height: inherit;
+}
+.main{
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+    </style>
+</head>
+<body>
+
+<div th:include="navbar.html"></div>
+<br><br><br><br><br><br><br>
+    <h1>Gallery</h1>
+
+    <div class="main container">
+    <div class="container gallery">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/temples/4.jpg" alt="Image 1" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/temples/5.jpg" alt="Image 2" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/temples/6.jpg" alt="Image 3" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/temples/7.jpg" alt="Image 4" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/temples/8.jpg" alt="Image 5" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/temples/9.jpg" alt="Image 6" class="img-fluid">
+            </div>
+           
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/temples/10.jpg" alt="Image 8" class="img-fluid">
+            </div>
+             <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/temples/11.jpg" alt="Image 1" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <div class="container gallery">
+        <div class="row">
+           
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/temples/12.jpg" alt="Image 2" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/temples/13.jpg" alt="Image 3" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/temples/14.jpg" alt="Image 4" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/temples/15.jpg" alt="Image 5" class="img-fluid">
+            </div>
+           
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/hospital/4.jpg" alt="Image 7" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/hospital/5.jpg" alt="Image 8" class="img-fluid">
+            </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                        <img src="../images/hospital/7.jpg" alt="Image 1" class="img-fluid">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                        <img src="../images/hospital/8.jpg" alt="Image 2" class="img-fluid">
+                    </div>
+        </div>
+    </div>
+
+            <div class="container gallery">
+                <div class="row">
+                  
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                        <img src="../images/hospital/9.jpg" alt="Image 3" class="img-fluid">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                        <img src="../images/hospital/10.jpg" alt="Image 4" class="img-fluid">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                        <img src="../images/hospital/3.jpg" alt="Image 5" class="img-fluid">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                        <img src="../images/school/11.jpg" alt="Image 6" class="img-fluid">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                        <img src="../images/school/12.jpg" alt="Image 7" class="img-fluid">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                        <img src="../images/school/13.jpg" alt="Image 8" class="img-fluid">
+                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                    <img src="../images/school/14.jpg" alt="Image 1" class="img-fluid">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                    <img src="../images/school/15.jpg" alt="Image 2" class="img-fluid">
+                </div>
+              </div>
+          </div>
+
+          
+          <div class="container gallery">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                    <img src="../images/school/16.jpg" alt="Image 3" class="img-fluid">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                    <img src="../images/school/17.jpg" alt="Image 4" class="img-fluid">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                    <img src="../images/school/18.jpg" alt="Image 5" class="img-fluid">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                    <img src="../images/University/1.jpg" alt="Image 6" class="img-fluid">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                    <img src="../images/University/2.jpg" alt="Image 7" class="img-fluid">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                    <img src="../images/University/3.jpg" alt="Image 8" class="img-fluid">
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/University/4.jpg" alt="Image 1" class="img-fluid">
+            </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/restorent/1.jpg" alt="Image 2" class="img-fluid">
+            </div>
+          </div>
+      </div>
+      
+      <div class="container gallery">
+        <div class="row">
+            
+          
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/restorent/2.jpg" alt="Image 3" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/restorent/3.jpg" alt="Image 4" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/restorent/4.jpg" alt="Image 5" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/restorent/5.jpg" alt="Image 6" class="img-fluid">
+            </div>
+         <!--    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/restorent/6.jpg" alt="Image 7" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
+                <img src="../images/restorent/restorent6.jpg" alt="Image 8" class="img-fluid">
+            </div> -->
+      </div>
+  </div>
+</div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

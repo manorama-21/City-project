@@ -1,0 +1,134 @@
+
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+	font-family:sans-serif;
+}
+
+.container{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	min-height:100vh;
+	background-image:url("../images/bg1.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index:-1;
+	filter:blur(5px);
+}
+
+
+/* Header Styles */
+
+
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color:white;
+}
+
+
+/* Navigation Styles */nav {
+
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav li {
+  position: relative;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+/* Style the dropdown menu */
+nav li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+nav li:hover ul {
+  display: block;
+}
+
+nav li ul li {
+  margin-bottom: 10px;
+  width:200px;
+
+}
+
+nav li ul li a {
+  color: #fff;
+}
+
+nav li ul li a:hover {
+  color: #ccc;
+}
+
+/* Style the dropdown menu arrow */
+nav li ul:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 10px solid #333;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+
+.centered {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:70px;
+  font-weight:bold;
+  color:white;
+}
+.centered h1{
+	font-size:100px;
+}
+.rainbow-text {
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  clear: both;
+}
+
+footer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
