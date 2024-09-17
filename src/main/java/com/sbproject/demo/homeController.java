@@ -10,11 +10,25 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class homeController {
 	/*
 	 * @Autowired private AdminService adminService;
 	 */
+	
+	private UserService userService;
+	
+	
+	@Autowired
+	
+	public homeController(UserService userService) {
+		this.userService = userService;
+	}
+	
+	private EmailService emailService;
+	
 
 	 @GetMapping("/")
 	 public String home() {
@@ -105,29 +119,49 @@ public class homeController {
 	 public String gallery() {
 		 return "gallery";
 	 }
-		/*
-		 * @GetMapping("/updateForm") public String updateUser() { return "updateUser";
-		 * }
-		 */
-		/*
-		 * @GetMapping("/viewdetails") public String viewdetails() { return
-		 * "viewdetails"; }
-		 */
-		/*
-		 * @GetMapping("/admindetail") public String admindetail(Model model) {
-		 * model.addAttribute("data", adminService.getUsers()); return "admindetail"; }
-		 * 
-		 * @PostMapping("login") public String saveUser(@ModelAttribute("admin") Admin
-		 * admin) { adminService.saveUser(admin); return "admin"; }
-		 * 
-		 * @GetMapping("/deleteUser/{id}") public String
-		 * deleteUser(@PathVariable(value="id") long id) { adminService.deleteUser(id);
-		 * return "admindetail"; }
-		 * 
-		 * @GetMapping("/updateForm/{id}") public String
-		 * updateadmindetail(@PathVariable(value="id") long id, Model model) { Optional
-		 * <Admin> admin= adminService.getUserById(id); model.addAttribute("data",
-		 * admin); return "updateadmindetail"; }
-		 */
+	
+	 
+/*user */
+	 @GetMapping("admindetail")
+	 public String admindetail(Model model) {
+		 model.addAttribute("data",userService.getUsers());
+		 return "admindetail";
+	 }
+	 
+	 @GetMapping("adminreg")
+		public String adminreg(Model model){
+			User user = new User();
+			model.addAttribute("user", user);
+			return "adminreg";
+		}
+	 
+		@PostMapping("/saveUser")
+		public String saveUser(@ModelAttribute("user") User user) {
+			userService.saveUser(user);
+			return "admin";
+		}
+		
+		 @GetMapping("/deleteUser/{id}")
+		 public String deleteUser(@PathVariable(value="id") long id) {
+			 userService.deleteUser(id);
+		 return "admindetail";
+		 }
+		 
+		 @GetMapping("/updateUser/{id}") 
+		 public String updateUser(@PathVariable(value="id") long id, Model model) { 
+		 Optional <User> user= userService.getUserById(id); 
+		 model.addAttribute("data", user); 
+		 return "updateUser"; }
+		 
+		
+/* Mail sending */		
+		@PostMapping("/sendMail")
+		public String sendMail(@ModelAttribute Email email, HttpSession session) {
+			
+			emailService.sendMail(email);
+			session.setAttribute("message", "Email Send successfully");
+			/* System.out.println("sending mail to: "+ email.getTo()); */
+			return "redirect:/";
+		}
 	 
 }

@@ -1,6 +1,7 @@
 package com.sbproject.demo;
 
 import java.util.List;
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,15 +18,19 @@ public class UserService {
 		
 	}
 	
-	public List<User> getUsers(){
-		return userRepository.findAll();
-	}
+	 public List<User> getUsers(){ 
+		 return userRepository.findAll();
+		 }
 	
-	public Optional<User> getUserById(Long id){
-		return userRepository.findById(id);
-	}
 	
-	public void deleteUser(Long id) {
-		userRepository.deleteById(id);
-	}
+	
+	 
+	 public Optional<User> getUserById(Long id){ 
+		 return userRepository.findById(id);
+		 }
+	 
+	 public void deleteUser(Long id) {
+		 userRepository.deleteById(id);
+		 }
+	
 }

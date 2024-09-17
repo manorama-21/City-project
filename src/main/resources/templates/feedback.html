@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8">
-   <title> Responsive Contact Us Form | CodingLab </title>
+   <title>feedback </title>
    
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <style>
@@ -151,7 +151,7 @@ left:10%;
          background-color: aquamarine;
          padding: 10px 10px;
          font-size: 20px;
-         color: white;
+         color:black;
       }
 }
 @media (max-width:900px) {
@@ -171,18 +171,25 @@ left:10%;
           <div class="image-box">
            <img src="../images/contact.jpg" alt="">
           </div>
-        <form action="#">
+        <form action="/sendMail" method="POST">
           <div class="topic">SEND US A FEEDBACK..</div>
+          
+<!--           <th:block th:if="${session.message}">
+          <p>[[${session.message}]]</p>
+          
+          <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+          </th:block> -->
+          
           <div class="input-box">
-            <input type="text" required>
-            <label>Enter your name</label>
-          </div>
-          <div class="input-box">
-            <input type="text" required>
+            <input type="text" name="to"required>
             <label>Enter your email</label>
           </div>
+          <div class="input-box">
+            <input type="text" name="subject"required>
+            <label>Subject</label>
+          </div>
           <div class="message-box">
-            <textarea required></textarea>
+            <textarea  name="message"required></textarea>
             <label>Write your feedback</label>
           </div>
           <div class="input-box">

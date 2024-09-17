@@ -22,7 +22,7 @@ table{
 </head>
 <body>
 
-<div th:include="homenav.html"></div>
+<div th:insert="~{homenav.html}"></div>
 <br><br><br><br><br><br><br><br><br><br><br>
 <div>
 <h1>Admin Details</h1>
@@ -52,7 +52,7 @@ table{
 <td th:text="${u.mail}"></td>
 <td th:text="${u.pass}"></td>
 <td th:text="${u.cpass}"></td>
-<td><a th:href="@{/updateForm/{id}(id=${u.id})}">Update</a>||
+<td><a th:href="@{/updateUser/{id}(id=${u.id})}">Update</a>||
 <a th:href="@{/deleteUser/{id}(id=${u.id})}">Delete</a></td>
 </tr>
 </table>

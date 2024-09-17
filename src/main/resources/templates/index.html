@@ -39,7 +39,7 @@
         <i class="fa fa-arrow-up"></i>
     </div> -->
     
-    <div th:include="navbar.html"></div>
+    <div th:insert="~{navbar.html}"></div>
     
  
 <br><br><br><br><br><br><br><br><br><br><br><br>
@@ -131,7 +131,7 @@
     <!-- Book Now Section Start -->
     <section id="book">
       
-        <div th:include="feedback.html"></div>
+        <div th:insert="~{feedback.html}"></div>
     </section>
     <!-- Book Now Section End -->
 
@@ -264,54 +264,9 @@
     <!-- Mutiple Slider Section Ends -->
 
     <!-- Footer Starts-->
-    <section id="footer">
-        <div class="container">
-            <div class="row text-center text-xs-center text-sm-left text-md-left">
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                    <h5>Quick links</h5>
-                    <ul class="list-unstyled quick-links">
-                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
-                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Contact Us</a></li>
-                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Feedback</a></li>
-                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Gallery</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                    <h5>Quick links</h5>
-                    <ul class="list-unstyled quick-links">
-                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Help Center</a></li>
-                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Author</a></li>
-                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Blog</a></li>
-                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Privacy Policy</a></li>
-                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                    <h5>Our Location</h5>
-                    <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115330.45656870601!2d81.71918285001391!3d25.402240789131696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398534c9b20bd49f%3A0xa2237856ad4041a!2sPrayagraj%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1724928424399!5m2!1sen!2sin" width="450" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5 text-center">
-                    <ul class="list-unstyled list-inline social">
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                    <p class="h6">&copy; All rights reserved.<a class="text-green ml-2" href="#" target="_blank">City Guide</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
+    
+<!--     <div th:insert="footer.html"></div> -->
+  
 <!-- footer end -->
 
     <script src="../static/js/owl.carousel.min.js"></script>
