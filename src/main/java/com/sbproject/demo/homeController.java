@@ -18,16 +18,17 @@ public class homeController {
 	 * @Autowired private AdminService adminService;
 	 */
 	
-	private UserService userService;
+	private final UserService userService;
+	private final EmailService emailService;
 	
 	
 	@Autowired
 	
-	public homeController(UserService userService) {
+	public homeController(UserService userService, EmailService emailService ) {
 		this.userService = userService;
+		this.emailService = emailService;
 	}
 	
-	private EmailService emailService;
 	
 
 	 @GetMapping("/")
@@ -122,36 +123,40 @@ public class homeController {
 	
 	 
 /*user */
-	 @GetMapping("admindetail")
-	 public String admindetail(Model model) {
-		 model.addAttribute("data",userService.getUsers());
-		 return "admindetail";
-	 }
+
+	 @GetMapping("/admindetail")
+		 public String admindetail(Model model) {
+		 model.addAttribute("data", userService.getUsers());
+			 return "admindetail";
+		 }
 	 
-	 @GetMapping("adminreg")
+	 @GetMapping("/adminreg")
 		public String adminreg(Model model){
-			User user = new User();
+			User user=new User();
 			model.addAttribute("user", user);
 			return "adminreg";
 		}
 	 
-		@PostMapping("/saveUser")
+		@PostMapping("saveUser")
 		public String saveUser(@ModelAttribute("user") User user) {
 			userService.saveUser(user);
-			return "admin";
+			return "redirect:/admin";
 		}
 		
-		 @GetMapping("/deleteUser/{id}")
-		 public String deleteUser(@PathVariable(value="id") long id) {
-			 userService.deleteUser(id);
-		 return "admindetail";
-		 }
-		 
-		 @GetMapping("/updateUser/{id}") 
-		 public String updateUser(@PathVariable(value="id") long id, Model model) { 
-		 Optional <User> user= userService.getUserById(id); 
-		 model.addAttribute("data", user); 
-		 return "updateUser"; }
+		@GetMapping("/deleteUser/{id}")
+		public String deleteUser(@PathVariable(value="id") long id) {
+			userService.deleteUser(id);
+			return "redirect:/admindetail";
+		}
+		
+		@GetMapping("/updateForm/{id}")
+		public String updateForm(@PathVariable(value="id") long id, Model model) {
+			Optional <User> user= userService.getUserById(id);
+			model.addAttribute("data", user);
+			return "updateUser";
+		}
+	 
+		
 		 
 		
 /* Mail sending */		

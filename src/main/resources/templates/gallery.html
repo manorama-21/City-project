@@ -33,7 +33,12 @@
             text-align: center;
             margin: 20px 0;
             color: #333;
+            font-size:40px;
+            font-weight:bold;
+            text-decoration:underline;
+            
         }
+       
 
         .row > .imgbox {
     width: 240px;
@@ -57,9 +62,11 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 <body>
 
 <div th:include="navbar.html"></div>
-<br><br><br><br><br><br><br>
-    <h1>Gallery</h1>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+    <h1>Gallery</h1>
+  
+<br><br>
     <div class="main container">
     <div class="container gallery">
         <div class="row">
@@ -208,6 +215,11 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
       </div>
   </div>
 </div>
+
+<!-- footer -->
+<div th:insert="footer.html"></div> 
+
+
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

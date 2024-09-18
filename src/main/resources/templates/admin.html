@@ -3,65 +3,60 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, 
-    initial-scale=1.0">
-    <title>Adminlogin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
     <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
-
     <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap'>
     <link rel="stylesheet" href="CSS/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
 </head>
 
 <body>
-<div th:include="navbar.html"></div>
-
+    <div th:include="navbar.html"></div>
 
     <div class="wrapper">
         <div class="login-box">
             <div class="login-header">
-
-                <span> Login</span>
+                <span>Login</span>
             </div>
-            <form action="" get="" enctype="multipart/form-data"
-                onsubmit="return login()">
+            <form action="/login" method="post" id="loginForm">
                 <div class="input-box">
-                    <input type="text" id="user" class="input-field" required>
-
-                    <label for="user" class="label">Username
-                    </label>
-                    <i class="bx bx-user icon"></i>
+                    <input type="text" id="mail" name="mail" class="input-field" required>
+                    <label for="mail" class="label">Email</label>
                 </div>
+                <br>
                 <div class="input-box">
-                    <input type="password" id="pass" class="input-field" autocomplete="off">
-                    <label for="pass" class="label">Password</label>
-                    <i class="bx bx-lock-alt icon" id="show-password">
-
-                    </i>
+                    <input type="password" id="passw" name="passw" class="input-field" autocomplete="off" required>
+                    <label for="passw" class="label">Password</label>
+                    <i class="bx bx-lock-alt icon" id="show-password"></i>
                 </div>
-                <div class="remember-forgot">
-                    <div class="remember-me">
-                        <input type="checkbox" id="remember">
-                        <label for="remember">Remember me</label>
-                    </div>
-                    <div class="forgot">
-                        <a href="#">Forgot password</a>
-                    </div>
-                </div>
-
+                <br>
                 <div class="input-box">
                     <input type="submit" class="input-submit" value="Login">
                 </div>
-              
             </form>
         </div>
-
     </div>
 
-    
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
 
-    <script src="form.js"></script>
+            // Simulate login logic
+            const mail = document.getElementById('mail').value;
+            const passw = document.getElementById('passw').value;
+
+            if (mail && passw) {
+                // Here, you would typically validate the credentials with your server
+                console.log('Login successful for:', mail);
+
+                // Redirect to home page after successful login
+                window.location.href = '/admin_home'; // Ensure this path is correct
+            } else {
+                alert('Please fill out all fields.');
+            }
+        });
+    </script>
 </body>
 
 </html>

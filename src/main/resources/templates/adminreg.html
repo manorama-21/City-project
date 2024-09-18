@@ -28,7 +28,7 @@
             <form action="/saveUser" method="post">
                 
                  <div class="input-box">
-                    <input type="text" id="fname" class="input-field" required>
+                    <input type="text" id="fname" name="fname" class="input-field" required>
 
                     <label for="fname" class="label">Firstname
                     </label>
@@ -36,7 +36,7 @@
                 </div>
                 <br>
                 <div class="input-box">
-                    <input type="text" id="lname" class="input-field" required>
+                    <input type="text" id="lname"  name="lname" class="input-field" required>
 
                     <label for="lname" class="label">Lastname
                     </label>
@@ -44,7 +44,7 @@
                 </div>
                  <br>
                  <div class="input-box">
-                    <input type="text" id="phone" class="input-field" required>
+                    <input type="text" id="phone"  name="phone" class="input-field" required>
 
                     <label for="phone" class="label">Phone
                     </label>
@@ -53,7 +53,7 @@
                  
             <br>
                  <div class="input-box">
-                    <input type="text" id="mail" class="input-field" required>
+                    <input type="text" id="mail"  name="mail"  class="input-field" required>
 
                     <label for="mail" class="label">Email
                     </label>
@@ -61,16 +61,16 @@
                 </div>
                  <br>
                 <div class="input-box">
-                    <input type="pass" id="pass" class="input-field" autocomplete="off">
-                    <label for="pass" class="label">Password</label>
+                    <input type="password" id="passw"  name="passw" class="input-field" autocomplete="off">
+                    <label for="passw" class="label">Password</label>
                     <i class="bx bx-lock-alt icon" id="show-password">
 
                     </i>
                 </div>
                  <br>
                  <div class="input-box">
-                    <input type="cpass" id="cpass" class="input-field" autocomplete="off">
-                    <label for="cpass" class="label">Confirm Password</label>
+                    <input type="cpassword" id="cpassw" name="cpassw" class="input-field" autocomplete="off">
+                    <label for="cpassw" class="label">Confirm Password</label>
                     <i class="bx bx-lock-alt icon" id="show-password">
 
                     </i>
@@ -78,7 +78,7 @@
                 <br>
 
                 <div class="input-box">
-                    <input type="submit" class="input-submit" value="Register">
+                    <input type="submit" name="submit" class="input-submit" value="Register">
                 </div>
               
             </form>
@@ -88,7 +88,7 @@
 
     
 
-    <script src="form.js"></script>
+    <script></script>
 </body>
 
 </html>

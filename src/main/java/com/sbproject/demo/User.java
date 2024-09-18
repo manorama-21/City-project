@@ -1,8 +1,6 @@
-
 package com.sbproject.demo;
 
 import jakarta.persistence.Entity;
-
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -13,13 +11,12 @@ public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	Long id;
-	
 	String fname;
 	String lname;
 	String phone;
 	String mail;
-	String pass;
-	String cpass;
+	String passw;
+	String cpassw;
 	public Long getId() {
 		return id;
 	}
@@ -50,27 +47,27 @@ public class User {
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
-	public String getPass() {
-		return pass;
+	public String getPassw() {
+		return passw;
 	}
-	public void setPass(String pass) {
-		this.pass = pass;
+	public void setPassw(String passw) {
+		this.passw = passw;
 	}
-	public String getCpass() {
-		return cpass;
+	public String getCpassw() {
+		return cpassw;
 	}
-	public void setCpass(String cpass) {
-		this.cpass = cpass;
+	public void setCpassw(String cpassw) {
+		this.cpassw = cpassw;
 	}
-	public User(Long id, String fname, String lname, String phone, String mail, String pass, String cpass) {
+	public User(Long id, String fname, String lname, String phone, String mail, String passw, String cpassw) {
 		super();
 		this.id = id;
 		this.fname = fname;
 		this.lname = lname;
 		this.phone = phone;
 		this.mail = mail;
-		this.pass = pass;
-		this.cpass = cpass;
+		this.passw = passw;
+		this.cpassw = cpassw;
 	}
 	public User() {
 		// TODO Auto-generated constructor stub
@@ -78,7 +75,7 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", fname=" + fname + ", lname=" + lname + ", phone=" + phone + ", mail=" + mail
-				+ ", pass=" + pass + ", cpass=" + cpass + "]";
+				+ ", passw=" + passw + ", cpassw=" + cpassw + "]";
 	}
 	
 	

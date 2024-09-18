@@ -14,16 +14,16 @@ public class EmailService {
 	@Autowired
 	private JavaMailSender javaMailSender;
 	
-	public void sendMail(Email em)
+	public void sendMail(Email email)
 	{
 		try {
 			MimeMessage message = javaMailSender.createMimeMessage();
 			MimeMessageHelper helper = new MimeMessageHelper(message);
 			
 			helper.setFrom("manorama210688@gmail.com");
-			helper.setTo(em.getTo());
-			helper.setSubject(em.getSubject());
-			helper.setText(em.getMessage());
+			helper.setTo(email.getTo());
+			helper.setSubject(email.getSubject());
+			helper.setText(email.getMessage());
 			
 			javaMailSender.send(message);
 			

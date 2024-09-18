@@ -35,25 +35,28 @@ table{
 <th>ID</th>
 <th>Firstname</th>
 <th>Lastname</th>
+
 <th>Phone</th>
 <th>Mail</th>
-
-
 <th>Password</th>
-<th>Confirm_Password</th>
+<th>CPassword</th>
 <th>Actions</th>
 </tr>
 
- <tr th:each="u: ${data}">
+<tr th:each="u: ${data}">
 <td th:text="${u.id}"></td>
 <td th:text="${u.fname}"></td>
 <td th:text="${u.lname}"></td>
 <td th:text="${u.phone}"></td>
 <td th:text="${u.mail}"></td>
-<td th:text="${u.pass}"></td>
-<td th:text="${u.cpass}"></td>
-<td><a th:href="@{/updateUser/{id}(id=${u.id})}">Update</a>||
-<a th:href="@{/deleteUser/{id}(id=${u.id})}">Delete</a></td>
+<td th:text="${u.passw}"></td>
+<td th:text="${u.cpassw}"></td>
+<td>
+<a th:href="@{/updateForm/{id}(id=${u.id})}">Update</a> ||
+ <a th:href="@{/deleteUser/{id}(id=${u.id})}">Delete</a>
+ </td>
+
+
 </tr>
 </table>
 </div>
