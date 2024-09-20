@@ -1,29 +1,40 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <style>
-/* body{
-	background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKS03NyUDRZ8LCOOX8o92dvCoyWFqo_m_5Cg&s");
+body{
+ background-image:url("../images/aboutbg.jpg");
 	background-repeat:no-repeat;
-	background-size:100%;
+	background-size:cover;
 
-} */
+} 
+
 h1{
 	font-size:30px;
 	text-decoration:underline;
 	text-align:center;
 }
+
 table{
-	width:100%;
+	width:70%;
 	font-size:20px;
+	position:absolute;
+	left:15%;	
 }
 
+tr{
+text-align:center;
+}
+
+th{
+background-color:lightpurple;
+}
 
 </style>
 </head>
 <body>
 
 <div th:insert="~{homenav.html}"></div>
-<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 <div>
 <h1>Admin Details</h1>
 
@@ -38,8 +49,8 @@ table{
 
 <th>Phone</th>
 <th>Mail</th>
-<th>Password</th>
-<th>CPassword</th>
+<!-- <th>Password</th>
+<th>CPassword</th> -->
 <th>Actions</th>
 </tr>
 
@@ -49,10 +60,12 @@ table{
 <td th:text="${u.lname}"></td>
 <td th:text="${u.phone}"></td>
 <td th:text="${u.mail}"></td>
-<td th:text="${u.passw}"></td>
-<td th:text="${u.cpassw}"></td>
+
+<!-- <td th:text="${u.passw}"></td>
+<td th:text="${u.cpassw}"></td> -->
 <td>
-<a th:href="@{/updateForm/{id}(id=${u.id})}">Update</a> ||
+<!-- <a th:href="@{/updateForm/{id}(id=${u.id})}">Update</a> || -->
+
  <a th:href="@{/deleteUser/{id}(id=${u.id})}">Delete</a>
  </td>
 
