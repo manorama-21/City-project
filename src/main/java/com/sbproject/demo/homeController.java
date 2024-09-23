@@ -149,12 +149,12 @@ public class homeController {
 			return "redirect:/admindetail";
 		}
 		
-		@GetMapping("/updateForm/{id}")
-		public String updateForm(@PathVariable(value="id") long id, Model model) {
-			Optional <User> user= userService.getUserById(id);
-			model.addAttribute("data", user);
-			return "updateUser";
-		}
+		/*
+		 * @GetMapping("/updateForm/{id}") public String
+		 * updateForm(@PathVariable(value="id") long id, Model model) { Optional <User>
+		 * user= userService.getUserById(id); model.addAttribute("data", user); return
+		 * "updateUser"; }
+		 */
 	 
 		
 		 
