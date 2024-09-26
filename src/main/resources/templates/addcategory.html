@@ -7,6 +7,17 @@
 
 <link rel="stylesheet" href="css/addcategory.css">
 </head>
+<style>
+button{
+font-size:20px;
+background-color:lightblue;
+padding:0 20px;
+border-radius:5px;
+}
+button:hover{
+background-color:blue;
+}
+</style>
 <body>
 
 <div th:include="homenav.html"></div>
@@ -26,11 +37,14 @@
 	<br><br><br><br><br><br><br><br><br><br>
 <h1><font color="indigo">ADD CATEGORY</font></h1>
 
-<form action="" method="" >
-<br>
-  <label for="category">Category Title</label><br>
-  <input type="text" id="category" name="category" value=""><br><br>
-  <input type="submit" value="Submit" href="index" />
+<form action="#" th:action="@{/savecategory}" th:object="${category}" method="post">
+    <div>
+        <label for="categoryName">Category Name:</label>
+        <br>
+        <input type="text" id="categoryName" th:field="*{categoryName}" required />
+    </div>
+    <br>
+    <button type="submit" >Save</button>
 </form>
 
 	<br><br><br><br><br><br><br><br><br><br><br><br>

@@ -20,13 +20,15 @@ public class homeController {
 	
 	private final UserService userService;
 	private final EmailService emailService;
+	private final CategoryService categoryService;
 	
 	
 	@Autowired
 	
-	public homeController(UserService userService, EmailService emailService ) {
+	public homeController(UserService userService, EmailService emailService, CategoryService categoryService) {
 		this.userService = userService;
 		this.emailService = emailService;
+		this.categoryService =categoryService;
 	}
 	
 	
@@ -62,10 +64,8 @@ public class homeController {
 		 return "admin_home";
 	 }
 	 
-	 @GetMapping("/addcategory")
-	 public String addcategory() {
-		 return "addcategory";
-	 }
+	 
+
 	 
 	 @GetMapping("/addcity")
 	 public String addcity() {
@@ -155,8 +155,21 @@ public class homeController {
 		 * user= userService.getUserById(id); model.addAttribute("data", user); return
 		 * "updateUser"; }
 		 */
-	 
 		
+/* Category */
+		@GetMapping("/addcategory")
+	    public String addCategory(Model model) {
+	        Category category = new Category();  // Create a new Category object
+	        model.addAttribute("category", category);  // Add category to the model for binding
+	        return "addcategory";  // Return the view name 'addcategory.html'
+	    }
+
+	    // POST mapping to handle form submission and save category
+	    @PostMapping("/savecategory")
+	    public String saveCategory(@ModelAttribute("category") Category category) {
+	        categoryService.saveCategory(category);  // Save the category via the service
+	        return "admin_home";  // Redirect to a page that lists all categories (or success page)
+	    }
 		 
 		
 /* Mail sending */		
