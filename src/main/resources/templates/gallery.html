@@ -15,48 +15,39 @@
             background-repeat:no-repeat;
             background-size:cover;
         }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
-            filter: brightness(0.8);
-        }
-        .gallery {
-            padding-top: 20px;
-        }
-        h1 {
-            text-align: center;
-            margin: 20px 0;
-            color: #333;
-            font-size:40px;
-            font-weight:bold;
-            text-decoration:underline;
-            
-        }
-       
-
-        .row > .imgbox {
-    width: 240px;
-    height: 200px;
+      .gallery-item img{
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+.filter-gal-par{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.gallery-item img:hover{
+    transform: scale(1.1,1.1);
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0.7;
+}
+.gallery-item{
+    margin-bottom: 20px;
     overflow: hidden;
 }
-.imgbox img{
-    width: inherit;
-    height: inherit;
+  footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  clear: both;
+  width:100%;
 }
-.main{
-    background: rgba( 255, 255, 255, 0.25 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 4px );
--webkit-backdrop-filter: blur( 4px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
+footer p {
+  font-size: 20px;
+  margin-bottom: 10px;
+} 
+
     </style>
 </head>
 <body>
@@ -64,160 +55,178 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 <div th:include="navbar.html"></div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-    <h1>Gallery</h1>
+    <h1 style="font-size:50px; text-align:center;text-decoration:underline">Gallery</h1>
   
 <br><br>
-    <div class="main container">
-    <div class="container gallery">
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/temples/4.jpg" alt="Image 1" class="img-fluid">
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/temples/5.jpg" alt="Image 2" class="img-fluid">
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/temples/6.jpg" alt="Image 3" class="img-fluid">
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/temples/7.jpg" alt="Image 4" class="img-fluid">
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/temples/8.jpg" alt="Image 5" class="img-fluid">
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/temples/9.jpg" alt="Image 6" class="img-fluid">
-            </div>
-           
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/temples/10.jpg" alt="Image 8" class="img-fluid">
-            </div>
-             <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/temples/11.jpg" alt="Image 1" class="img-fluid">
-            </div>
-        </div>
-    </div>
 
-    <div class="container gallery">
-        <div class="row">
-           
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/temples/12.jpg" alt="Image 2" class="img-fluid">
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/temples/13.jpg" alt="Image 3" class="img-fluid">
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/temples/14.jpg" alt="Image 4" class="img-fluid">
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/temples/15.jpg" alt="Image 5" class="img-fluid">
-            </div>
-           
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/hospital/4.jpg" alt="Image 7" class="img-fluid">
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/hospital/5.jpg" alt="Image 8" class="img-fluid">
-            </div>
-              <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                        <img src="../images/hospital/7.jpg" alt="Image 1" class="img-fluid">
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                        <img src="../images/hospital/8.jpg" alt="Image 2" class="img-fluid">
-                    </div>
-        </div>
-    </div>
 
-            <div class="container gallery">
-                <div class="row">
-                  
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                        <img src="../images/hospital/9.jpg" alt="Image 3" class="img-fluid">
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                        <img src="../images/hospital/10.jpg" alt="Image 4" class="img-fluid">
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                        <img src="../images/hospital/3.jpg" alt="Image 5" class="img-fluid">
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                        <img src="../images/school/11.jpg" alt="Image 6" class="img-fluid">
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                        <img src="../images/school/12.jpg" alt="Image 7" class="img-fluid">
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                        <img src="../images/school/13.jpg" alt="Image 8" class="img-fluid">
-                    </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                    <img src="../images/school/14.jpg" alt="Image 1" class="img-fluid">
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                    <img src="../images/school/15.jpg" alt="Image 2" class="img-fluid">
-                </div>
-              </div>
-          </div>
-
-          
-          <div class="container gallery">
             <div class="row">
 
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                    <img src="../images/school/16.jpg" alt="Image 3" class="img-fluid">
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                    <img src="../images/school/17.jpg" alt="Image 4" class="img-fluid">
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                    <img src="../images/school/18.jpg" alt="Image 5" class="img-fluid">
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                    <img src="../images/University/1.jpg" alt="Image 6" class="img-fluid">
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                    <img src="../images/University/2.jpg" alt="Image 7" class="img-fluid">
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                    <img src="../images/University/3.jpg" alt="Image 8" class="img-fluid">
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/University/4.jpg" alt="Image 1" class="img-fluid">
-            </div>
-              <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/restorent/1.jpg" alt="Image 2" class="img-fluid">
-            </div>
-          </div>
-      </div>
-      
-      <div class="container gallery">
-        <div class="row">
+              
+                <div class="filter-gal-par">
+                    <div class="gallery-item temple">
+                        <img src="../images/temples/1.jpg" alt="" class="img-responsive">
+                    </div>
+                    
+                     <div class="gallery-item temple">
+                        <img src="../images/temples/2.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item temple">
+                        <img src="../images/temples/3.jpg" alt="" class="img-responsive">
+                    </div>
+                    
+                     <div class="gallery-item temple">
+                        <img src="../images/temples/4.jpg" alt="" class="img-responsive">
+                    </div>
+                     <div class="gallery-item temple">
+                        <img src="../images/temples/5.jpg" alt="" class="img-responsive">
+                    </div>
+                     <div class="gallery-item temple">
+                        <img src="../images/temples/6.jpg" alt="" class="img-responsive">
+                    </div>
+                     <div class="gallery-item temple">
+                        <img src="../images/temples/7.jpg" alt="" class="img-responsive">
+                    </div>
+                    
+                     <div class="gallery-item temple">
+                        <img src="../images/temples/8.jpg" alt="" class="img-responsive">
+                    </div>
+                     <div class="gallery-item temple">
+                        <img src="../images/temples/9.jpg" alt="" class="img-responsive">
+                    </div>
+                     <div class="gallery-item temple">
+                        <img src="../images/temples/10.jpg" alt="" class="img-responsive">
+                    </div>
+                     <div class="gallery-item temple">
+                        <img src="../images/temples/11.jpg" alt="" class="img-responsive">
+                    </div>
+                     <div class="gallery-item temple">
+                        <img src="../images/temples/12.jpg" alt="" class="img-responsive">
+                    </div>
+                     <div class="gallery-item temple">
+                        <img src="../images/temples/13.jpg" alt="" class="img-responsive">
+                    </div>
+                     <div class="gallery-item temple">
+                        <img src="../images/temples/14.jpg" alt="" class="img-responsive">
+                    </div>
+                     <div class="gallery-item temple">
+                        <img src="../images/temples/15.jpg" alt="" class="img-responsive">
+                    </div>
+                    
+                     <div class="gallery-item tour">
+                        <img src="../images/tourist/1.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item tour">
+                        <img src="../images/tourist/2.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item tour">
+                        <img src="../images/tourist/3.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item kumbh">
+                        <img src="../images/kumbh/1.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item kumbh">
+                        <img src="../images/kumbh/2.jpg" alt="" class="img-responsive">
+                    </div>
+                     <div class="gallery-item kumbh">
+                        <img src="../images/kumbh/3.jpg" alt="" class="img-responsive">
+                    </div> 
+                    
+                    <div class="gallery-item kumbh">
+                        <img src="../images/hospital/4.jpg" alt="" class="img-responsive">
+                    </div> 
+                    <div class="gallery-item kumbh">
+                        <img src="../images/hospital/5.jpg" alt="" class="img-responsive">
+                    </div> 
+                    <div class="gallery-item kumbh">
+                        <img src="../images/hospital/6.jpg" alt="" class="img-responsive">
+                    </div> 
+                    <div class="gallery-item kumbh">
+                        <img src="../images/hospital/3.jpg" alt="" class="img-responsive">
+                    </div> 
+                    <div class="gallery-item kumbh">
+                        <img src="../images/hospital/7.jpg" alt="" class="img-responsive">
+                    </div> 
+                    <div class="gallery-item kumbh">
+                        <img src="../images/hospital/8.jpg" alt="" class="img-responsive">
+                    </div> 
+                    
+                 <div class="gallery-item kumbh">
+                        <img src="../images/hospital/9.jpg" alt="" class="img-responsive">
+                    </div> 
+                      <div class="gallery-item kumbh">
+                        <img src="../images/hospital/10.jpg" alt="" class="img-responsive">
+                    </div> 
+                <div class="gallery-item kumbh">
+                        <img src="../images/school/11.jpg" alt="" class="img-responsive">
+                    </div>  
+                     <div class="gallery-item kumbh">
+                        <img src="../images/school/12.jpg" alt="" class="img-responsive">
+                    </div> 
+              
+               <div class="gallery-item kumbh">
+                        <img src="../images/school/13.jpg" alt="" class="img-responsive">
+                    </div> 
+                     <div class="gallery-item kumbh">
+                        <img src="../images/school/14.jpg" alt="" class="img-responsive">
+                    </div> 
+                     <div class="gallery-item kumbh">
+                        <img src="../images/school/14.jpg" alt="" class="img-responsive">
+                    </div> 
+                     <div class="gallery-item kumbh">
+                        <img src="../images/school/15.jpg" alt="" class="img-responsive">
+                    </div> 
+                     <div class="gallery-item kumbh">
+                        <img src="../images/school/16.jpg" alt="" class="img-responsive">
+                    </div> 
+                     <div class="gallery-item kumbh">
+                        <img src="../images/school/17.jpg" alt="" class="img-responsive">
+                    </div> 
+                     <div class="gallery-item kumbh">
+                        <img src="../images/school/18.jpg" alt="" class="img-responsive">
+                    </div> 
+                     <div class="gallery-item kumbh">
+                        <img src="../images/University/1.jpg" alt="" class="img-responsive">
+                    </div> 
+                     <div class="gallery-item kumbh">
+                        <img src="../images/University/2.jpg" alt="" class="img-responsive">
+                    </div> 
+                     <div class="gallery-item kumbh">
+                        <img src="../images/University/3.jpg" alt="" class="img-responsive">
+                    </div> 
+                     <div class="gallery-item kumbh">
+                        <img src="../images/University/4.jpg" alt="" class="img-responsive">
+                    </div> 
+                     <div class="gallery-item kumbh">
+                        <img src="../images/restorent/1.jpg" alt="" class="img-responsive">
+                    </div> 
+                     <div class="gallery-item kumbh">
+                        <img src="../images/restorent/2.jpg" alt="" class="img-responsive">
+                    </div> 
+                    <div class="gallery-item kumbh">
+                        <img src="../images/restorent/3.jpg" alt="" class="img-responsive">
+                    </div> 
+                 <div class="gallery-item kumbh">
+                        <img src="../images/restorent/4.jpg" alt="" class="img-responsive">
+                    </div> 
+      <div class="gallery-item kumbh">
+                        <img src="../images/restorent/5.jpg" alt="" class="img-responsive">
+                    </div> 
+                    <div class="gallery-item kumbh">
+                        <img src="../images/restorent/6.jpg" alt="" class="img-responsive">
+                    </div> 
+                   
             
-          
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/restorent/2.jpg" alt="Image 3" class="img-fluid">
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/restorent/3.jpg" alt="Image 4" class="img-fluid">
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/restorent/4.jpg" alt="Image 5" class="img-fluid">
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/restorent/5.jpg" alt="Image 6" class="img-fluid">
-            </div>
-         <!--    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/restorent/6.jpg" alt="Image 7" class="img-fluid">
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 imgbox">
-                <img src="../images/restorent/restorent6.jpg" alt="Image 8" class="img-fluid">
-            </div> -->
-      </div>
-  </div>
-</div>
 
-<!-- footer -->
-<div th:insert="footer.html"></div> 
+                    
+            
+         
+      </div>
+ 
+<footer>
+ <p>&copy; 2024 SMART CITY - CITY GUIDE</p>
+</footer>
+
 
 
     <!-- Bootstrap JS and dependencies -->

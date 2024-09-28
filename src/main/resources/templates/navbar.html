@@ -159,6 +159,54 @@ nav1 ul1.active {
     background-color: black;
 }
   
+  .dropbtn {
+  background-color: black;
+  color: white;
+  padding: 16px;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  bottom:15px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+font-size:20px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+span{
+position:relative;
+
+font-size:30px;
+}
 /*end dropdown*/
    </style>
   </head>
@@ -196,14 +244,22 @@ nav1 ul1.active {
             <a href="about">About</a>
           </li1>
           <li1>
-            <a href="#gallery">Gallery</a>
+<!--             <a href="#gallery">Gallery</a> -->
+<div class="dropdown">
+  <button class="dropbtn">Gallery</button>
+  <div class="dropdown-content">
+    <a href="#gallery">Photos</a>
+    <a href="video">Videos</a>
+    
+  </div>
+</div>
           </li1>
           <li1>
             <a href="contact">Contact</a>
           </li1>
          
           <li1>
-            <a href="admin">Admin</a>
+     <a href="helpline">Helpline</a>
           </li1>
         
 

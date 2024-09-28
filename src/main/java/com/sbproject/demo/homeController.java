@@ -64,8 +64,15 @@ public class homeController {
 		 return "admin_home";
 	 }
 	 
+	 @GetMapping("/helpline")
+	 public String helpline() {
+		 return "helpline";
+	 }
 	 
-
+	 @GetMapping("/video")
+	 public String video() {
+		 return "video";
+	 }
 	 
 	 @GetMapping("/addcity")
 	 public String addcity() {
