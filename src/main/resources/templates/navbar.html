@@ -202,10 +202,53 @@ font-size:20px;
   display: block;
 }
 
+ 
+        
+
 span{
 position:relative;
 
 font-size:30px;
+}
+
+
+
+.google-translate {
+    float: right;
+    padding: 8px 16px;
+}
+
+/* Adjusting the translate dropdown styles */
+.goog-te-combo {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the widget dropdown for a more polished look */
+.goog-te-combo:focus {
+    outline: none;
+    box-shadow: 0 0 5px #04AA6D;
+}
+
+/* Navbar responsiveness */
+@media (max-width: 768px) {
+     .google-translate {
+        float: none;
+        display: block;
+        text-align: left;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .google-translate {
+        padding: 10px;
+    }
 }
 /*end dropdown*/
    </style>
@@ -247,9 +290,9 @@ font-size:30px;
 <!--             <a href="#gallery">Gallery</a> -->
 <div class="dropdown">
   <button class="dropbtn">Gallery</button>
-  <div class="dropdown-content">
-    <a href="#gallery">Photos</a>
-    <a href="video">Videos</a>
+  <div class="dropdown-content" >
+    <a href="#gallery" style="font-size:20px;">Photos</a>
+    <a href="video" style="font-size:20px;">Videos</a>
     
   </div>
 </div>
@@ -263,7 +306,9 @@ font-size:30px;
           </li1>
         
 
-
+  <div class="google-translate">
+            <div id="google_translate_element"></div>
+        </div>
        
         </ul1>
       </nav1>
@@ -297,6 +342,18 @@ const btnScrollToTop = document.querySelector("#btnScrollToTop");
 btnScrollToTop.addEventListener("click", function(){
     window.scrollTo(0, 0);
 })
+
+
+
     </script>
+    
+    
+   <script type="text/javascript"> 
+ function googleTranslateElementInit() { 
+   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element'); 
+ } 
+ </script> 
+ 
+ <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
   </body>
 </html>
